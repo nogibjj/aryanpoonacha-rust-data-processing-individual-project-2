@@ -11,6 +11,8 @@ apt-get install -y \
   build-essential \
   openssl
 
+apt-get install libssl-dev pkg-config
+
 ## Install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
 rustup install nightly
