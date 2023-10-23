@@ -17,9 +17,13 @@ container-lint:
 refactor: format lint
 
 run:
-# 	cargo run
+	cargo run --bin extract &&\
+	cargo run --bin transform_load &&\
+	cargo run --bin query
 
 deploy:
-	cargo run square 5
+	cargo run --bin extract &&\
+	cargo run --bin transform_load &&\
+	cargo run --bin query
 		
-all: install lint test format refactor
+all: install lint test format refactor deploy
