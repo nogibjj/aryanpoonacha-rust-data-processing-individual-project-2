@@ -19,3 +19,7 @@ path = "src/extract.rs"
 [[bin]]
 name = "transform_load"
 path = "src/transform_load.rs"
+
+[[bin]]
+name = "query"
+path = "src/query.rs"

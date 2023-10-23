@@ -1,8 +1,50 @@
-# Rust Template
+# Miniproject 8 For IDS 706
 
-Rust Template for Rust projects.
+This repo contains 3 Rust scripts that do the following:
 
-## User Guide
+## Rust Data Processing
+
+This repository contains a collection of Rust scripts for data extraction, transformation, loading, and querying. The scripts interact with a SQLite database and a CSV file.
+
+### Scripts
+
+#### 1. `extract.rs`
+
+This script downloads a CSV file from a specified URL and saves it to a local directory. It uses the `reqwest` crate for HTTP requests and the `tokio` crate for asynchronous programming.
+
+To run this script, use the following command:
+
+```bash
+cargo run --bin extract
+```
+
+#### 2. transform_load.rs
+This script reads data from a CSV file and loads it into a SQLite database. It uses the csv crate to read CSV files and the rusqlite crate to interact with SQLite databases.
+
+To run this script, use the following command:
+
+```
+cargo run --bin transform_load
+```
+
+#### 3. query.rs
+This script queries the SQLite database and prints the cars with the most horsepower. It uses the rusqlite crate to interact with SQLite databases.
+
+To run this script, use the following command:
+
+```
+cargo run --bin query
+```
+
+### Dependencies
+This project uses several dependencies, including openssl, reqwest, tokio, csv, and rusqlite. Make sure to add these to your Cargo.toml file.
+
+### Setup
+Before running the scripts, make sure to install Rust and Cargo on your system. You can download them from the official Rust website.
+
+Then, you can run the scripts as described above.
+
+## Environment Details:
 
 This is a basic environment that comes with the following software choices preinstalled:
 
