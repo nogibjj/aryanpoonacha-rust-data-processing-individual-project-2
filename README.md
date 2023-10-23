@@ -1,6 +1,22 @@
 # Miniproject 8 For IDS 706
 
-This repo contains 3 Rust scripts that do the following:
+This repo recreates the functionality of [this](https://github.com/nogibjj/aryanpoonacha-sqlite-lab-miniproject-5) project using Rust instead of Python for increased performance.
+
+# Documented Performance Improvement
+
+The Makefile for this project and the python project both contain make deploy that perform all the required operations sequentially. We make use of the time CLI command to benchmark their performance to compare. The results of ```time make deploy``` for this Rust project is:
+
+real    0m1.480s
+user    0m0.278s
+sys     0m0.227s
+
+And the same command run on the python project on its corresponding codespace and environment is:
+
+real    0m3.031s
+user    0m0.159s
+sys     0m0.044s
+
+The real performance improvement is almost doubled for Rust.
 
 ## Rust Data Processing
 
