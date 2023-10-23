@@ -9,9 +9,12 @@ apt-get install -y \
   zsh \
   vim \
   build-essential \
-  openssl
+  openssl \
+  libsqlite3-dev
 
+apt-get install libsqlite3-dev
 apt-get install libssl-dev pkg-config
+apt install pkg-config
 
 ## Install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
@@ -23,6 +26,9 @@ rustup component add clippy --toolchain nightly
 
 cargo install cargo-expand
 cargo install cargo-edit
+
+export PKG_CONFIG_PATH=/usr/lib/openssl/pkgconfig
+export OPENSSL_DIR=/usr/lib/openssl
 
 ## setup and install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
