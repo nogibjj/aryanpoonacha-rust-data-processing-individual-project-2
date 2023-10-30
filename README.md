@@ -1,22 +1,4 @@
-# Miniproject 8 For IDS 706
-
-This repo recreates the functionality of [this](https://github.com/nogibjj/aryanpoonacha-sqlite-lab-miniproject-5) project using Rust instead of Python for increased performance.
-
-# Documented Performance Improvement
-
-The Makefile for this project and the python project both contain make deploy that perform all the required operations sequentially. We make use of the time CLI command to benchmark their performance to compare. The results of ```time make deploy``` for this Rust project is:
-
-real    0m1.480s
-user    0m0.278s
-sys     0m0.227s
-
-And the same command run on the python project on its corresponding codespace and environment is:
-
-real    0m3.031s
-user    0m0.159s
-sys     0m0.044s
-
-The real performance improvement is almost doubled for Rust.
+# Individual Project 2 for IDS 706
 
 ## Rust Data Processing
 
@@ -51,6 +33,10 @@ To run this script, use the following command:
 ```
 cargo run --bin query
 ```
+
+### Utilizing GitHub Copilot
+
+Throughout the development of these scripts, GitHub Copilot was used as an AI pair programmer. It provided suggestions for completing lines or blocks of code, which were particularly helpful for writing complex SQL queries and handling edge cases in data processing. It also suggested improvements in code structure and organization, leading to more readable and maintainable code.
 
 ### Dependencies
 This project uses several dependencies, including openssl, reqwest, tokio, csv, and rusqlite. Make sure to add these to your Cargo.toml file.
